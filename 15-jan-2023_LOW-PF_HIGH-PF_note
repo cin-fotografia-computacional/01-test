@@ -1,0 +1,68 @@
+
+# Notes
+
+# Tipos de Filtros no Domínio da Frequência
+
+- Filtro Passa Baixa
+  - Para que serve?
+    - Suavização da Imagem
+    - Remoção do Ruído
+    - Limiarização + Melhoramento da imagem
+  -Tipos 
+    - Ideal
+    - Guassiana
+    - Butterworth
+- Filtro Passa Alta
+  - Para que serve?
+    - Aguçamento da Imagem
+    - Contorno
+  - Tipos 
+    - Ideal
+    - Guassiana
+    - Butterworth
+
+# Aplicações
+- Reconhecimento de Caracteres
+- Reconhecimento de Impressão Digital
+
+
+# Algoritmos do Domínio da Frquencia
+## Base
+- Transformada discreta de Fourier
+- Centralização do espectro na transformada discreta de Fourier
+- Obter a fase de cada complexo no espectro
+- Apenas a fase, com valor absoluto 1 (i.e |F(u,v)| = 1 )
+- Reversão (inversa) para o domínio espacial
+
+## Melhoramento da Imagem
+- Transformada discreta de Fourier
+- Centralização do espectro na transformada discreta de Fourier
+- Obter a fase de cada complexo no espectro
+- Apenas a fase, com valor absoluto 1 (i.e |F(u,v)| = 1 )
+- Transformada Inversa
+- Espectro e escalonamento via função log
+- Reversão (inversa) para o domínio espacial
+
+##  Operador Sobel no domínio espacial usando a propriedade convolução <=> multiplicação entre esses domínios
+
+-Imagem de Entrada
+  - Preenchendo com zeros a imagem MxN e duplicando para o tamanho PxQ, onde P=2M e Q=2N
+  - Obtendo a imagem no domínio da frequência
+  - Centralizando o espectro
+  - Completando o resultado da variável com zeros
+  - Calculando o valor absoluto do espectro
+- Máscara (kernel) do filtro de Sobel (aguçamento, contornos) no domínio espacial
+  - Preenchendo o kernel com zeros
+  - Cálculo da Transformada de Fourier Discreta
+  - Centralização da DFT 2D
+  - Igualar a zero a componente real em função da propriedades da DFT (simetria)
+
+- Multiplicação no domínio da Frequência F(u,v)H(u,v)
+  - Descentralização da DFT 2D
+  - Cálculo da Transformada Inversa de Fourier
+
+# Para pesquisar 
+- O que é efeito Aliasing?
+
+
+
